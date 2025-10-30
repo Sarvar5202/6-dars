@@ -7,18 +7,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/main.css">
     <style>
+        /* Faqat sof CSS qoladi */
         .body-bg {
             background-color: #313344;
         }
         .form-bg {
             background-color: #3B3D52;
         }
-        .input-field {
-            @apply w-full p-3 rounded-md bg-white border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-orange-500 transition duration-150;
-        }
-        .input-field-dark {
-            @apply w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-orange-500 transition duration-150;
-        }
+        /* @apply директиваси мавжуд бўлган input-field ва input-field-dark олиб ташланди. */
+        /* Ularning sinflari to'g'ridan-to'g'ri HTML ga o'tkazildi. */
+
         .cost-calc-section {
             position: relative;
             padding-bottom: 250px; 
@@ -39,10 +37,16 @@
             z-index: 10;
         }
         .manager-img {
-            @apply h-full w-full object-contain object-bottom;
+            /* @apply o'rniga to'g'ridan-to'g'ri CSS ishlatiladi */
+            height: 100%; 
+            width: 100%; 
+            object-fit: contain; 
+            object-position: bottom;
         }
         .form-wrapper {
-            @apply relative z-20; 
+            /* @apply o'rniga to'g'ridan-to'g'ri CSS ishlatiladi */
+            position: relative; 
+            z-index: 20; 
         }
         .carousel-item {
             display: none;
@@ -224,20 +228,20 @@
                     
                     <div>
                         <label class="block text-sm font-medium text-gray-300 mb-1">Категория товара:</label>
-                        <input type="text" placeholder="Выберите товар" class="input-field">
+                        <input type="text" placeholder="Выберите товар" class="w-full p-3 rounded-md bg-white border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-orange-500 transition duration-150">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-300 mb-1">Стоимость груза:</label>
-                        <input type="text" placeholder="Введите стоимость" class="input-field">
+                        <input type="text" placeholder="Введите стоимость" class="w-full p-3 rounded-md bg-white border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-orange-500 transition duration-150">
                     </div>
 
                     <div>
                         <label class="block text-sm font-medium text-gray-300 mb-1">Вес груза (кг):</label>
-                        <input type="text" placeholder="Введите вес" class="input-field">
+                        <input type="text" placeholder="Введите вес" class="w-full p-3 rounded-md bg-white border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-orange-500 transition duration-150">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-300 mb-1">Объем груза (м³):</label>
-                        <input type="text" placeholder="Рассчитать" class="input-field">
+                        <input type="text" placeholder="Рассчитать" class="w-full p-3 rounded-md bg-white border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-orange-500 transition duration-150">
                     </div>
                     
                     <div class="md:col-span-2 space-y-3">
@@ -253,7 +257,7 @@
                         </div>
                         <div class="mt-4">
                             <label class="block text-sm font-medium text-gray-300 mb-1">Код ТН ВЭД:</label>
-                            <input type="text" placeholder="Введите код" class="input-field">
+                            <input type="text" placeholder="Введите код" class="w-full p-3 rounded-md bg-white border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-orange-500 transition duration-150">
                         </div>
                     </div>
 
@@ -315,34 +319,34 @@
             ВАРИАНТЫ ДОСТАВКИ ГРУЗОВ ИЗ КИТАЯ
         </h2>
         <div class="flex items-center justify-center">
-             <button class="hidden md:block text-4xl text-gray-500 hover:text-white transition mr-4">&lt;</button>
-             <div class="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-6 w-full max-w-4xl">
-                 <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl w-full md:w-1/3 hover:shadow-green-500/30 transition duration-300">
-                     <img src="/images/drive-1.svg" alt="Avto yetkazish" class="w-full h-40 object-cover">
-                     <div class="p-4 text-center">
-                         <h3 class="font-semibold text-lg mb-2">Авто</h3>
-                         <p class="text-green-500 font-bold text-2xl">2.5$</p>
-                         <p class="text-sm text-gray-400 mt-1">за кг | от 15 дней</p>
-                     </div>
-                 </div>
-                 <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl w-full md:w-1/3 hover:shadow-green-500/30 transition duration-300">
-                     <img src="/images/drive-2.svg" alt="Poezd yetkazish" class="w-full h-40 object-cover">
-                     <div class="p-4 text-center">
-                         <h3 class="font-semibold text-lg mb-2">Поезд</h3>
-                         <p class="text-green-500 font-bold text-2xl">2.9$</p>
-                         <p class="text-sm text-gray-400 mt-1">за кг | от 20 дней</p>
-                     </div>
-                 </div>
-                 <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl w-full md:w-1/3 hover:shadow-green-500/30 transition duration-300">
-                     <img src="/images/drive-3.svg" alt="Aviya yetkazish" class="w-full h-40 object-cover">
-                     <div class="p-4 text-center">
-                         <h3 class="font-semibold text-lg mb-2">Авиа</h3>
-                         <p class="text-green-500 font-bold text-2xl">6.5$</p>
-                         <p class="text-sm text-gray-400 mt-1">за кг | от 7 дней</p>
-                     </div>
-                 </div>
-             </div>
-             <button class="hidden md:block text-4xl text-gray-500 hover:text-white transition ml-4">&gt;</button>
+            <button class="hidden md:block text-4xl text-gray-500 hover:text-white transition mr-4">&lt;</button>
+            <div class="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-6 w-full max-w-4xl">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl w-full md:w-1/3 hover:shadow-green-500/30 transition duration-300">
+                    <img src="/images/drive-1.svg" alt="Avto yetkazish" class="w-full h-40 object-cover">
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-lg mb-2">Авто</h3>
+                        <p class="text-green-500 font-bold text-2xl">2.5$</p>
+                        <p class="text-sm text-gray-400 mt-1">за кг | от 15 дней</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl w-full md:w-1/3 hover:shadow-green-500/30 transition duration-300">
+                    <img src="/images/drive-2.svg" alt="Poezd yetkazish" class="w-full h-40 object-cover">
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-lg mb-2">Поезд</h3>
+                        <p class="text-green-500 font-bold text-2xl">2.9$</p>
+                        <p class="text-sm text-gray-400 mt-1">за кг | от 20 дней</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl w-full md:w-1/3 hover:shadow-green-500/30 transition duration-300">
+                    <img src="/images/drive-3.svg" alt="Aviya yetkazish" class="w-full h-40 object-cover">
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-lg mb-2">Авиа</h3>
+                        <p class="text-green-500 font-bold text-2xl">6.5$</p>
+                        <p class="text-sm text-gray-400 mt-1">за кг | от 7 дней</p>
+                    </div>
+                </div>
+            </div>
+            <button class="hidden md:block text-4xl text-gray-500 hover:text-white transition ml-4">&gt;</button>
         </div>
     </section>
 
@@ -385,7 +389,7 @@
                 <p>Мы работаем с **2010 года** и обеспечиваем надежную доставку грузов из Китая в СНГ. Гарантируем безопасность, соблюдение сроков и выгодные цены для вашего бизнеса.</p>
             </div>
             <div class="lg:w-1/3 flex justify-center">
-                <img src="/images/sertifikat.svg" alt="Sertifikat" class="w-48 md:w-64 h-auto shadow-2xl rounded-lg">
+                <img src="images/s" alt="Sertifikat" class="w-48 md:w-64 h-auto shadow-2xl rounded-lg">
             </div>
         </div>
         
@@ -418,9 +422,9 @@
             <div class="form-bg p-6 rounded-lg shadow-xl">
                 <h3 class="font-semibold mb-4 text-lg">ЕСТЬ ВОПРОС?</h3>
                 <form class="space-y-4">
-                    <input type="text" placeholder="Ваше имя" class="input-field-dark">
-                    <input type="email" placeholder="Ваш E-mail" class="input-field-dark">
-                    <textarea placeholder="Ваш вопрос" rows="3" class="input-field-dark"></textarea>
+                    <input type="text" placeholder="Ваше имя" class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-orange-500 transition duration-150">
+                    <input type="email" placeholder="Ваш E-mail" class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-orange-500 transition duration-150">
+                    <textarea placeholder="Ваш вопрос" rows="3" class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-orange-500 transition duration-150"></textarea>
                     <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-md w-full transition">
                         Отправить
                     </button>
