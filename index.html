@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MASTER TAO - Cargo xizmatlari</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/main.css">
     <style>
         .body-bg {
             background-color: #313344;
@@ -43,6 +44,12 @@
         .form-wrapper {
             @apply relative z-20; 
         }
+        .carousel-item {
+            display: none;
+        }
+        .carousel-item.active {
+            display: block; 
+        }
     </style>
 </head>
 <body class="body-bg text-white font-sans">
@@ -71,41 +78,134 @@
 
     <section class="relative h-[450px] md:h-[600px] lg:h-[650px] overflow-hidden">
         
-        <div class="absolute inset-0 z-0">
-            <img src="/images/kema.svg" alt="Yuk kemasi" 
-                 class="w-full h-full object-cover object-center opacity-80">
-            <div class="absolute inset-0 bg-gray-900 opacity-40"></div> 
+        <div id="hero-carousel" class="absolute inset-0 z-0">
+            
+            <div class="carousel-item active absolute inset-0">
+                <img src="/images/kema.svg" alt="Yuk kemasi" 
+                    class="w-full h-full object-cover object-center opacity-80">
+                <div class="absolute inset-0 bg-gray-900 opacity-40"></div> 
+                <div class="container mx-auto relative z-10 h-full flex items-center p-4 md:p-8">
+                    <div class="text-white max-w-lg">
+                        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+                            ПРЯМОЕ КАРГО ИЗ КИТАЯ
+                        </h1>
+                        <p class="text-base md:text-lg mb-8 text-gray-200">
+                            Доставляем любые грузы из Китая по честной цене
+                        </p>
+                        <button class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg text-lg shadow-xl transition duration-300">
+                            Рассчитать стоимость
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item absolute inset-0">
+                <img src="/images/img11.png" alt="Rabochiy" 
+                    class="w-full h-full object-cover object-center opacity-80">
+                <div class="absolute inset-0 bg-gray-900 opacity-50"></div> 
+                <div class="container mx-auto relative z-10 h-full flex items-center p-4 md:p-8">
+                    <div class="text-white max-w-lg">
+                        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+                            ГАРАНТИРУЕМ СРОКИ!
+                        </h1>
+                        <p class="text-base md:text-lg mb-8 text-gray-200">
+                            Всегда четко укладываемся в обозначенные сроки. Договором закрепляем до 60 дней.
+                        </p>
+                        <button class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg text-lg shadow-xl transition duration-300">
+                            Рассчитать стоимость
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item absolute inset-0">
+                <img src="/images/img2.png" alt="Vykup tovarov" 
+                    class="w-full h-full object-cover object-center opacity-80">
+                <div class="absolute inset-0 bg-gray-900 opacity-50"></div> 
+                <div class="container mx-auto relative z-10 h-full flex items-center p-4 md:p-8">
+                    <div class="text-white max-w-lg">
+                        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+                            ВЫКУП ТОВАРА С ТАОБАО, 1688
+                        </h1>
+                        <p class="text-base md:text-lg mb-8 text-gray-200">
+                            Выкуп и док. оформление товаров, а также проверка качества.
+                        </p>
+                        <button class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg text-lg shadow-xl transition duration-300">
+                            Оставить заявку
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item absolute inset-0">
+                <img src="/images/img33.png" alt="Gruzovik na mostu" 
+                    class="w-full h-full object-cover object-center opacity-80">
+                <div class="absolute inset-0 bg-gray-900 opacity-50"></div> 
+                <div class="container mx-auto relative z-10 h-full flex items-center p-4 md:p-8">
+                    <div class="text-white max-w-lg">
+                        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+                            ЭКСПРЕСС АВТО ДОСТАВКА
+                        </h1>
+                        <p class="text-base md:text-lg mb-8 text-gray-200">
+                            Доставляем карго грузы из Китая в Россию и СНГ от 15 дней.
+                        </p>
+                        <button class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg text-lg shadow-xl transition duration-300">
+                            Рассчитать стоимость
+                        </button>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="container mx-auto relative z-10 h-full flex items-center p-4 md:p-8">
-            <div class="text-white max-w-lg">
-                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
-                    ПРЯМОЕ КАРГО ИЗ КИТАЯ
-                </h1>
-                <p class="text-base md:text-lg mb-8 text-gray-200">
-                    Доставляем любые грузы из Китая по честной цене
-                </p>
-                <button class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg text-lg shadow-xl transition duration-300">
-                    Рассчитать стоимость
-                </button>
-            </div>
-            
-             <div class="absolute inset-y-0 left-0 flex items-center p-4">
-                 <button class="text-white text-4xl opacity-70 hover:opacity-100 transition focus:outline-none ml-[-1rem]">&lt;</button>
-            </div>
-            <div class="absolute inset-y-0 right-0 flex items-center p-4">
-                 <button class="text-white text-4xl opacity-70 hover:opacity-100 transition focus:outline-none mr-[-1rem]">&gt;</button>
-            </div>
+        <div class="absolute inset-y-0 left-0 flex items-center p-4 z-20">
+            <button id="prev-slide" class="text-white text-4xl opacity-70 hover:opacity-100 transition focus:outline-none ml-[-1rem]">&lt;</button>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center p-4 z-20">
+            <button id="next-slide" class="text-white text-4xl opacity-70 hover:opacity-100 transition focus:outline-none mr-[-1rem]">&gt;</button>
         </div>
             
-        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
-             <div class="w-2 h-2 bg-white rounded-full"></div>
-             <div class="w-2 h-2 bg-white opacity-40 rounded-full"></div> 
-             <div class="w-2 h-2 bg-white opacity-40 rounded-full"></div> 
-             <div class="w-2 h-2 bg-white opacity-40 rounded-full"></div> 
+        <div id="carousel-dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">
+            <div class="w-2 h-2 bg-white rounded-full dot active-dot"></div>
+            <div class="w-2 h-2 bg-white opacity-40 rounded-full dot"></div> 
+            <div class="w-2 h-2 bg-white opacity-40 rounded-full dot"></div> 
+            <div class="w-2 h-2 bg-white opacity-40 rounded-full dot"></div> 
         </div>
     </section>
-
+    
+    <script>
+        const slides = document.querySelectorAll('.carousel-item');
+        const dotsContainer = document.getElementById('carousel-dots');
+        const prevButton = document.getElementById('prev-slide');
+        const nextButton = document.getElementById('next-slide');
+        let currentSlide = 0;
+        function updateDots() {
+            dotsContainer.innerHTML = '';
+            slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('w-2', 'h-2', 'bg-white', 'rounded-full', 'dot');
+                if (index !== currentSlide) {
+                    dot.classList.add('opacity-40');
+                }
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+        }
+        function goToSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            updateDots();
+        }
+        nextButton.addEventListener('click', () => {
+            goToSlide(currentSlide + 1);
+        });
+        prevButton.addEventListener('click', () => {
+            goToSlide(currentSlide - 1);
+        });
+        updateDots();
+    </script>
+    
     <section class="cost-calc-section container mx-auto py-16 px-4">
         <h2 class="text-white text-2xl md:text-3xl font-semibold mb-10 border-b border-green-500/50 pb-2 inline-block">
             ПОЛУЧИТЬ РАССЧЕТ СТОИМОСТИ ДОСТАВКИ ВАШЕГО ГРУЗА
@@ -169,7 +269,7 @@
                     </div>
 
                     <div class="md:col-span-2 mt-4">
-                            <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-md w-full transition duration-300 shadow-lg">
+                        <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-md w-full transition duration-300 shadow-lg">
                             Следующий шаг
                         </button>
                     </div>
@@ -190,22 +290,22 @@
             <div class="flex flex-col items-center text-center p-4">
                 <img src="/images/icon-2.svg" alt="Icon Price" class="h-16 w-16 mb-4">
                 <p class="font-medium text-lg">Честная цена</p>
-                <p class="text-sm text-gray-400 mt-1">Подробный текст...</p>
+                <p class="text-sm text-gray-400 mt-1">Никаких скрытых платежей и комиссий, работаем прозрачно.</p>
             </div>
             <div class="flex flex-col items-center text-center p-4">
                 <img src="/images/icon2.svg" alt="Icon Delivery" class="h-16 w-16 mb-4">
                 <p class="font-medium text-lg">Быстрая доставка</p>
-                <p class="text-sm text-gray-400 mt-1">Подробный текст...</p>
+                <p class="text-sm text-gray-400 mt-1">Оперативная обработка и быстрая отправка грузов.</p>
             </div>
             <div class="flex flex-col items-center text-center p-4">
                 <img src="/images/icon-1.svg" alt="Icon Quality" class="h-16 w-16 mb-4">
                 <p class="font-medium text-lg">Контроль качества</p>
-                <p class="text-sm text-gray-400 mt-1">Подробный текст...</p>
+                <p class="text-sm text-gray-400 mt-1">Проверяем товар перед отправкой, чтобы избежать брака.</p>
             </div>
             <div class="flex flex-col items-center text-center p-4">
                 <img src="/images/icon2.svg" alt="Icon Support" class="h-16 w-16 mb-4">
                 <p class="font-medium text-lg">24/7 Поддержка</p>
-                <p class="text-sm text-gray-400 mt-1">Подробный текст...</p>
+                <p class="text-sm text-gray-400 mt-1">Наши менеджеры всегда на связи для решения ваших вопросов.</p>
             </div>
         </div>
     </section>
@@ -217,30 +317,30 @@
         <div class="flex items-center justify-center">
              <button class="hidden md:block text-4xl text-gray-500 hover:text-white transition mr-4">&lt;</button>
              <div class="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-6 w-full max-w-4xl">
-                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl w-full md:w-1/3 hover:shadow-green-500/30 transition duration-300">
-                    <img src="/images/drive-1.svg" alt="Avto yetkazish" class="w-full h-40 object-cover">
-                    <div class="p-4 text-center">
-                        <h3 class="font-semibold text-lg mb-2">Авто</h3>
-                        <p class="text-green-500 font-bold text-2xl">2.5$</p>
-                        <p class="text-sm text-gray-400 mt-1">за кг | от 15 дней</p>
-                    </div>
-                </div>
                  <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl w-full md:w-1/3 hover:shadow-green-500/30 transition duration-300">
-                    <img src="/images/drive-2.svg" alt="Poezd yetkazish" class="w-full h-40 object-cover">
-                    <div class="p-4 text-center">
-                        <h3 class="font-semibold text-lg mb-2">Поезд</h3>
-                        <p class="text-green-500 font-bold text-2xl">2.9$</p>
-                        <p class="text-sm text-gray-400 mt-1">за кг | от 20 дней</p>
-                    </div>
-                </div>
+                     <img src="/images/drive-1.svg" alt="Avto yetkazish" class="w-full h-40 object-cover">
+                     <div class="p-4 text-center">
+                         <h3 class="font-semibold text-lg mb-2">Авто</h3>
+                         <p class="text-green-500 font-bold text-2xl">2.5$</p>
+                         <p class="text-sm text-gray-400 mt-1">за кг | от 15 дней</p>
+                     </div>
+                 </div>
                  <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl w-full md:w-1/3 hover:shadow-green-500/30 transition duration-300">
-                    <img src="/images/drive-3.svg" alt="Aviya yetkazish" class="w-full h-40 object-cover">
-                    <div class="p-4 text-center">
-                        <h3 class="font-semibold text-lg mb-2">Авиа</h3>
-                        <p class="text-green-500 font-bold text-2xl">6.5$</p>
-                        <p class="text-sm text-gray-400 mt-1">за кг | от 7 дней</p>
-                    </div>
-                </div>
+                     <img src="/images/drive-2.svg" alt="Poezd yetkazish" class="w-full h-40 object-cover">
+                     <div class="p-4 text-center">
+                         <h3 class="font-semibold text-lg mb-2">Поезд</h3>
+                         <p class="text-green-500 font-bold text-2xl">2.9$</p>
+                         <p class="text-sm text-gray-400 mt-1">за кг | от 20 дней</p>
+                     </div>
+                 </div>
+                 <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl w-full md:w-1/3 hover:shadow-green-500/30 transition duration-300">
+                     <img src="/images/drive-3.svg" alt="Aviya yetkazish" class="w-full h-40 object-cover">
+                     <div class="p-4 text-center">
+                         <h3 class="font-semibold text-lg mb-2">Авиа</h3>
+                         <p class="text-green-500 font-bold text-2xl">6.5$</p>
+                         <p class="text-sm text-gray-400 mt-1">за кг | от 7 дней</p>
+                     </div>
+                 </div>
              </div>
              <button class="hidden md:block text-4xl text-gray-500 hover:text-white transition ml-4">&gt;</button>
         </div>
@@ -255,21 +355,21 @@
                     <img src="/images/sklad2.svg" alt="Sklad" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-semibold text-lg mb-2">Склад в Китае</h3>
-                        <p class="text-sm text-gray-400">Описание услуги...</p>
+                        <p class="text-sm text-gray-400">Предоставляем собственный склад для консолидации и хранения ваших товаров.</p>
                     </div>
                 </div>
                 <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl">
                     <img src="/images/sklad.svg" alt="Xarid" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-semibold text-lg mb-2">Выкуп товаров</h3>
-                        <p class="text-sm text-gray-400">Описание услуги...</p>
+                        <p class="text-sm text-gray-400">Поможем выкупить товары на Taobao, 1688 и других китайских площадках.</p>
                     </div>
                 </div>
                 <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl">
                     <img src="/images/nazorat.svg" alt="Sifat nazorati" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-semibold text-lg mb-2">Контроль качества</h3>
-                        <p class="text-sm text-gray-400">Описание услуги...</p>
+                        <p class="text-sm text-gray-400">Тщательная проверка товаров на брак и соответствие заказу перед отправкой.</p>
                     </div>
                 </div>
             </div>
@@ -281,11 +381,11 @@
         <h2 class="text-white text-2xl font-semibold text-center md:text-left mb-10">О КОМПАНИИ</h2>
         <div class="flex flex-col lg:flex-row items-center lg:space-x-12 mb-16">
             <div class="lg:w-2/3 text-gray-400 space-y-4 mb-8 lg:mb-0">
-                <p>Краткий текст о компании, об опыте, о миссии. Это может быть 2-3 абзаца.</p>
-                <p>Мы работаем с 2010 года и обеспечиваем надежную доставку грузов из Китая в СНГ. Гарантируем безопасность и выгодные цены.</p>
+                <p>MASTER TAO — ваш надежный партнер в сфере карго-доставки из Китая. Мы предлагаем полный комплекс логистических услуг, включая выкуп, проверку качества, страхование и таможенное оформление.</p>
+                <p>Мы работаем с **2010 года** и обеспечиваем надежную доставку грузов из Китая в СНГ. Гарантируем безопасность, соблюдение сроков и выгодные цены для вашего бизнеса.</p>
             </div>
             <div class="lg:w-1/3 flex justify-center">
-                <img src="/images/sss.svg" alt="Sertifikat" class="w-48 md:w-64 h-auto shadow-2xl rounded-lg">
+                <img src="/images/sertifikat.svg" alt="Sertifikat" class="w-48 md:w-64 h-auto shadow-2xl rounded-lg">
             </div>
         </div>
         
@@ -304,9 +404,16 @@
                         Какие сроки доставки?
                         <span>+</span>
                     </summary>
-                    <p class="text-sm text-gray-400 mt-2">Ответ: Сроки зависят от выбранного типа доставки (Авто: 15 дней, Авиа: 7 дней).</p>
+                    <p class="text-sm text-gray-400 mt-2">Ответ: Сроки зависят от выбранного типа доставки (Авто: от 15 дней, Поезд: от 20 дней, Авиа: от 7 дней).</p>
                 </details>
-                </div>
+                <details class="bg-gray-800 p-4 rounded-lg cursor-pointer">
+                    <summary class="font-semibold text-white flex justify-between items-center">
+                        Сколько стоит доставка?
+                        <span>+</span>
+                    </summary>
+                    <p class="text-sm text-gray-400 mt-2">Ответ: Стоимость начинается от 2.5$ за кг. Точную цену рассчитает наш менеджер.</p>
+                </details>
+            </div>
 
             <div class="form-bg p-6 rounded-lg shadow-xl">
                 <h3 class="font-semibold mb-4 text-lg">ЕСТЬ ВОПРОС?</h3>
@@ -326,8 +433,8 @@
         <h2 class="text-white text-2xl font-semibold text-center mb-10">ГОТОВЫ К СОТРУДНИЧЕСТВУ</h2>
         <div class="flex flex-col lg:flex-row items-start lg:space-x-8">
             <div class="lg:w-1/2 space-y-6">
-                <p class="text-gray-400">Подробный текст о сотрудничестве, о возможностях для партнеров и корпоративных клиентов.</p>
-                <p class="text-gray-400">Мы предлагаем гибкие условия, скидки на объемы и полное сопровождение от закупки до доставки до вашей двери.</p>
+                <p class="text-gray-400">Мы заинтересованы в долгосрочном сотрудничестве с предпринимателями и компаниями, которые регулярно заказывают товары из Китая.</p>
+                <p class="text-gray-400">Мы предлагаем гибкие условия, скидки на объемы и полное сопровождение от закупки до доставки до вашей двери. Свяжитесь с нами, чтобы получить индивидуальное предложение.</p>
                 <img src="/images/sss.svg" alt="Yuk mashinasi" class="w-full h-auto rounded-lg shadow-xl">
             </div>
             <div class="lg:w-1/2 space-y-6 mt-8 lg:mt-0">
@@ -373,7 +480,7 @@
             </div>
             <div class="col-span-2 md:col-span-1">
                 <h4 class="text-white font-semibold mb-3">Контакты</h4>
-                <p>+998 (XX) XXX-XX-XX</p>
+                <p>+998 (88) 888 88 88</p>
                 <p>info@mastertao.com</p>
             </div>
         </div>
